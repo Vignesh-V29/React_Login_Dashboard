@@ -1,0 +1,128 @@
+.dashBoard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px auto;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    user-select: none;
+}
+
+.Header {
+    background: brown;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header h1{
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+    align-items: center;
+    background: dimgray;
+}
+
+#users {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2em;
+  }
+  
+  #users td, #users th {
+    border: 1px solid #ddd;
+    padding: 1em;
+  }
+
+  #users th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: brown;
+    color: white;
+  }
+
+  li {
+    list-style: none;
+  }  
+  .list {
+    text-decoration: none;
+    margin-right:10px
+  }
+  .list:hover{
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .holder{
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .holder .avatarImg{
+    position: relative;
+    top: -10px;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  @media only screen and (max-width: 600px){
+    .Header {
+      background: brown;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+  }
+
+@media screen and (max-width: 600px) {
+  .content {
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    table {
+      overflow-x: auto;
+  }
+
+  #users {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2em;
+    display: inline-block;
+  }
+}
+
+.loadingText{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  background: brown;
+}
+
+.loadingText::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  background: cornsilk;
+  animation: animate 3s 1s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    width: 10px;
+  }
+  100%{
+    width: 100%;
+  }
+}

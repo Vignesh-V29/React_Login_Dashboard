@@ -1,0 +1,110 @@
+*{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px repeat(4,1fr);
+    background-color: brown;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    border-radius: 25px;
+}
+
+.login-form{
+    width: 50%;
+    height: 75%;
+    position: relative;
+}
+
+input{
+    padding: 1em;
+    width: 20%;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    transition: all 1s ease;
+}
+
+input:focus{
+    width: 100%;
+}
+
+input.btn{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #fff !important;
+    cursor: pointer;
+}
+
+.form-group{
+    display: block;
+    align-self: center;
+}
+
+.label{
+    display: block;
+    width: 100%;
+}
+
+.btn-block{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    width: 30% !important;
+    border-radius: 12px;
+}
+
+.imgHolder{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;   
+}
+
+.img{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.errormsg{
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-50px);
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+    input{
+        width: 60%;
+    }
+
+    .login-form{
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+}
+
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px){
+
+    form{
+        height: 75%;
+    }
+}
